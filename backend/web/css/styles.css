@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+footer{
+    color: #fff;
+    margin-top: 20px;
+}
+.wrapper{
+    min-height: 85vh;
+}
+#embed::before{
+    padding: 0;
+}
+/* For the meets file */
+#meet-list{
+    margin: 20px auto;
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 20px;
+}
+.card{
+    transition: transform 0.3s;
+    box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.3),
+    -5px -3px 10px rgba(0, 0, 0, 0.2);
+}
+.card:hover{
+    transform: translateY(-5px);
+}
+.card-body{
+    cursor: pointer;
+}
