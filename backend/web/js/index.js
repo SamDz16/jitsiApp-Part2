@@ -52,9 +52,6 @@ $("button.btn-danger").click(() => {
 
   // Hide the meet
   $("#meet").css("display", "none");
-
-  // Leave the meet
-  myApi.dispose();
 });
 
 // myApi.participantKicckedOut((res) => {
