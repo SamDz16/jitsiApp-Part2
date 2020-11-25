@@ -21,6 +21,14 @@ class utile {
     return result;
   }
 
+  static verifyMeetForModification(meet, meetToModify) {
+    if(meet.options.roomName === meetToModify.options.roomName){
+      return true;
+    }
+
+    return false;
+  }
+
   static getMeets() {
     if (localStorage.getItem("meets") === null) return [];
 
@@ -44,14 +52,6 @@ class utile {
       (meet) => meet.options.roomName === roomName
     )[0];
   }
-
-  // static constructUrl(target) {
-  //   const href = location.href.split("/");
-  //   href[1] = "//";
-  //   href[href.length - 1] = `/${target}`;
-
-  //   return href.join("");
-  // }
 }
 
 // Handle submition
@@ -68,9 +68,10 @@ form.submit((e) => {
   // prevent default form submission behaviour
   e.preventDefault();
 
+  // Get the meet creation time
   const createdAt = new Date();
 
-  // Instanciate a new meet
+  // Instantiate a new meet
   meet = new Meet($("#domain").val(), {
     room: roomName.val(),
     roomName: roomName.val() + utile.hashCode(roomName.val()),
@@ -78,41 +79,176 @@ form.submit((e) => {
     createdAt: `${createdAt.toLocaleDateString()} - ${createdAt.toLocaleTimeString()}`,
   });
 
-  // Verify if the room doesn't exist in the local storage
-  const exists = utile.verifyMeet(meet);
+  if(localStorage.getItem("hasToBeModified") !== null) {
+      if(utile.verifyMeetForModification(meet, JSON.parse(localStorage.getItem(("hasToBeModified"))))){
+        // Their is no modification
+        $(".jumbotron").after(
+            $(
+                "<div style='width: 80%; margin: 20px auto;' class='alert alert-danger'><strong>Alert! </strong>A meet with this room name already exists</div>"
+            )
+                .delay(2000)
+                .fadeOut(3000)
+        );
+      } else {
+        // Their is a modification
+        const meets = utile.getMeets();
 
-  // Save in localStorage
-  if (!exists) {
-    let meets = utile.getMeets();
-    meets.push(meet);
-    localStorage.setItem("meets", JSON.stringify(meets));
+        // get the meet to be modified
+        const meetToModify = JSON.parse(localStorage.getItem("hasToBeModified"));
 
-    // Pop up a success alert to the user
-    $(".jumbotron").after(
-      $(
-        "<div style='width: 80%; margin: 20px auto;' class='alert alert-success'><strong>Alert! </strong>This meeting was added successfully</div>"
-      )
-        .delay(2000)
-        .fadeOut(3000)
-    );
+        // The new list of rooms (meetings) - Remove the old meet
+        const newList = meets.filter(room => room.options.roomName !== meetToModify.options.roomName);
 
-    // Clear out the fields
-    roomName.val("");
-    password.val("");
+        // Add the modified meet to the list of meets
+        newList.push(meet);
 
-    //Pop up the suggestion
-    $("form + div").slideDown("slow");
+        // Modify the local storage
+        localStorage.setItem("meets", JSON.stringify(newList));
+
+        // Remove the meet from localStorage
+        localStorage.removeItem("hasToBeModified");
+
+        $(".jumbotron").after(
+            $(
+                "<div style='width: 80%; margin: 20px auto;' class='alert alert-success'><strong>Alert! </strong>This meeting has been successfully modified</div>"
+            )
+                .delay(1000)
+                .fadeOut(2000, () => {
+                  // Redirect to the meets
+                  location.href = "http://localhost/jitsiApp/backend/web/index.php?r=site%2Fmeets";
+                })
+        );
+      }
   } else {
-    // Pop up an alert to the user
-    $(".jumbotron").after(
-      $(
-        "<div style='width: 80%; margin: 20px auto;' class='alert alert-danger'><strong>Alert! </strong>This meeting already exists</div>"
-      )
-        .delay(2000)
-        .fadeOut(3000)
-    );
+    // Create the meet
+    //Verify if the room doesn't exist in the local storage
+    const exists = utile.verifyMeet(meet);
+
+    // Save in localStorage
+    if (!exists) {
+      let meets = utile.getMeets();
+      meets.push(meet);
+      localStorage.setItem("meets", JSON.stringify(meets));
+
+      // Pop up a success alert to the user
+      $(".jumbotron").after(
+          $(
+              "<div style='width: 80%; margin: 20px auto;' class='alert alert-success'><strong>Alert! </strong>This meeting was added successfully</div>"
+          )
+              .delay(2000)
+              .fadeOut(3000)
+      );
+
+      //Pop up the suggestion
+      $("form + div").slideDown("slow");
+
+      // Clear out the fields
+      roomName.val("");
+      password.val("");
+
+    } else {
+      // Pop up an alert to the user
+      $(".jumbotron").after(
+          $(
+              "<div style='width: 80%; margin: 20px auto;' class='alert alert-danger'><strong>Alert! </strong>This meeting already exists</div>"
+          )
+              .delay(2000)
+              .fadeOut(3000)
+      );
+    }
   }
 });
+
+// form.submit((e) => {
+//   "use strict";
+//   // prevent default form submission behaviour
+//   e.preventDefault();
+//
+//   // Get the meet creation time
+//   const createdAt = new Date();
+//
+//   // Instantiate a new meet
+//   meet = new Meet($("#domain").val(), {
+//     room: roomName.val(),
+//     roomName: roomName.val() + utile.hashCode(roomName.val()),
+//     password: password.val(),
+//     createdAt: `${createdAt.toLocaleDateString()} - ${createdAt.toLocaleTimeString()}`,
+//   });
+//
+//   //Verify weather the action is not for modifying the meet or for creating it
+//   if(localStorage.getItem("hasToBeModified") !== null) {
+//     const existForModification = utile.verifyMeetForModification(meet, JSON.parse(localStorage.getItem("hasToBe")));
+//
+//     if (existForModification) {
+//
+//     } else {
+//
+//     }
+//
+//   }
+//
+//
+//   if(!existForModification){
+//     //Verify weather the action is not for modifying the meet or for creating it
+//     if(localStorage.getItem("hasToBeModified") !== null){
+//       // Their is a meeting to be modified
+//       const meets = utile.getMeets();
+//
+//       // get the meet to be modified
+//       const meetToModify = JSON.parse(localStorage.getItem("hasToBeModified"));
+//
+//       // The new list of rooms (meetings) - Remove the old meet
+//       const newList = meets.filter(room => room.options.roomName !== meetToModify.options.roomName);
+//
+//       // Add the modified meet to the list of meets
+//       newList.push(meet);
+//
+//       // Modify the local storage
+//       localStorage.setItem("meets", JSON.stringify(newList));
+//
+//       // Remove the meet from localStorage
+//       localStorage.removeItem("hasToBeModified");
+//
+//       // Redirect to the meets
+//       location.href = "http://localhost/jitsiApp/backend/web/index.php?r=site%2Fmeets";
+//     }
+//   } else {
+//     // Verify if the room doesn't exist in the local storage
+//     const exists = utile.verifyMeet(meet);
+//
+//     // Save in localStorage
+//     if (!exists) {
+//       let meets = utile.getMeets();
+//       meets.push(meet);
+//       localStorage.setItem("meets", JSON.stringify(meets));
+//
+//       // Pop up a success alert to the user
+//       $(".jumbotron").after(
+//           $(
+//               "<div style='width: 80%; margin: 20px auto;' class='alert alert-success'><strong>Alert! </strong>This meeting was added successfully</div>"
+//           )
+//               .delay(2000)
+//               .fadeOut(3000)
+//       );
+//
+//       //Pop up the suggestion
+//       $("form + div").slideDown("slow");
+//     }
+//   }
+//   // Clear out the fields
+//   roomName.val("");
+//   password.val("");
+//   } else {
+//     // Pop up an alert to the user
+//     $(".jumbotron").after(
+//       $(
+//         "<div style='width: 80%; margin: 20px auto;' class='alert alert-danger'><strong>Alert! </strong>This meeting already exists</div>"
+//       )
+//         .delay(2000)
+//         .fadeOut(3000)
+//     );
+//   }
+// });
 
 // To do if their is a meet to modify
 $(document).ready(() => {
@@ -120,7 +256,7 @@ $(document).ready(() => {
   if (localStorage.getItem("hasToBeModified") !== null) {
     // Means that their is a meet to be modified
 
-    // Retreive the meet
+    // Retrieve the meet
     const meet = JSON.parse(localStorage.getItem("hasToBeModified"));
 
     // Fill in the fields with the old values
@@ -128,7 +264,7 @@ $(document).ready(() => {
     password.val(meet.options.password);
 
     // Remove the meet from localStorage
-    localStorage.removeItem("hasToBeModified");
+    // localStorage.removeItem("hasToBeModified");
   }
 });
 

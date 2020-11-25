@@ -26,7 +26,7 @@ function listMeets() {
       <i style="color: #000; margin-right: 5px" class="fas fa-hand-point-right"></i> Room Name: <strong>${meet.options.room}</strong> <br />
       <i style="color: #000; margin-right: 5px" class="fas fa-hand-point-right"></i> Real Room Name: <strong>${meet.options.roomName}</strong> <br />
       <i style="color: #000; margin-right: 5px" class="fas fa-hand-point-right"></i> Password: <strong>${meet.options.password}</strong> <br />
-      <i style="color: #000; margin-right: 5px" class="fas fa-hand-point-right"></i> Created At: <strong>${meet.options.createdAt}</strong>
+      <i style="color: #000; margin-right: 5px" class="fas fa-hand-point-right"></i> Last Modification: <strong>${meet.options.createdAt}</strong>
     </div>
     <div class="card-footer text-center">
       <button onclick="editMeet(this)" class="btn btn-success"><i class="fas fa-edit"></i><span style="display: none">${meet.options.roomName}</span></button>
