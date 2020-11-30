@@ -1,10 +1,15 @@
 <?php
 
-/* @var $this yii\web\View */
+use yii\helpers\Url;
 
+/* @var $this yii\web\View */
+if (class_exists('yii\debug\Module')) {
+    $this->off(\yii\web\View::EVENT_END_BODY, [\yii\debug\Module::getInstance(), 'renderToolbar']);
+}
 $this->title = 'Jitsi App';
 ?>
 
+<h1><?= $meets ?></h1>
 <!-- Meet view -->
 <div class="wrapper">
 
@@ -24,6 +29,36 @@ $this->title = 'Jitsi App';
     <p class="text-center">&copy; 2020</p>
 </footer>
 
-<!-- JQuery CDN - Content Delevery Network -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script>
+    // Adding the click event for meetings
+    function embedMeet(target){
+        "use strict";
+        // Retrieve the roomName
+        const targetCard = target;
+        const roomName = targetCard.children[4].textContent.trim();
 
+        // Retrieve the targeted meet base on the roomName
+        const targetedMeet = utila.targetedMeet(roomName);
+
+        // Save the targeted meet to the local storage
+        localStorage.setItem("hasToBeEmbeded", JSON.stringify(targetedMeet));
+
+        // Construct the url to the home
+        location.href = "<?= Url::base('http') ?> . /index.php";
+    }
+
+    function editMeet(target) {
+        "use strict";
+        // Retrieve the roomName
+        const roomName = target.children[1].textContent;
+
+        // Retrieve the specific meet
+        const targetedMeet = utila.targetedMeet(roomName);
+
+        // Save the specific meet to the localStorage
+        localStorage.setItem("hasToBeModified", JSON.stringify(targetedMeet));
+
+        // Construct the targeted url to the create.html in order to make modifications
+        location.href = "<?= Url::base('http') ?> . /index.php?r=site%2Fcreate";
+    }
+</script>

@@ -53,13 +53,3 @@ $("button.btn-danger").click(() => {
   // Hide the meet
   $("#meet").css("display", "none");
 });
-
-// myApi.participantKicckedOut((res) => {
-//   console.log(res);
-// });
-
-// myApi.videoConferenceLeft((res) => alert("VIDEO CONFERENCE LEFT", res));
-
-// myApi.videoConferenceJoined((res) => alert("VIDEO CONFERENCE JOINED", res));
-
-// myApi.participantLeft((res) => alert("PARTICIPANT LEFT", res));

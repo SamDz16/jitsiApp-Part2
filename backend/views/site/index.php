@@ -1,34 +1,18 @@
 <?php
 
-/* @var $this yii\web\View */
+use yii\helpers\Url;
 
+/* @var $this yii\web\View */
+if (class_exists('yii\debug\Module')) {
+    $this->off(\yii\web\View::EVENT_END_BODY, [\yii\debug\Module::getInstance(), 'renderToolbar']);
+}
 $this->title = 'Jitsi App';
 ?>
-<!-- Index view -->
-<!--<nav class="navbar navbar-expand-lg navbar-dark bg-primary">-->
-<!--    <div class="container">-->
-<!--        <a class="navbar-brand" href="/">Jitsi App</a>-->
-<!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader">-->
-<!--            <span class="navbar-toggler-icon"></span>-->
-<!--        </button>-->
-<!---->
-<!--        <div class="collapse navbar-collapse" id="navbarHeader">-->
-<!--            <ul class="navbar-nav ml-auto">-->
-<!--                <li class="nav-item active">-->
-<!--                    <a class="nav-link" href="/">Home-->
-<!--                        <span class="sr-only">(current)</span>-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="/create.html">Create</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="/meets.html">Meets</a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</nav>-->
+
+<script>
+    // clear out tye local storage
+    localStorage.removeItem("hasToBeModified");
+</script>
 
 <div class="wrapper">
 
@@ -36,14 +20,12 @@ $this->title = 'Jitsi App';
     <div class="jumbotron">
         <h1 class="text-center mb-5">Jitsi Integration App</h1>
 
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center">
+        <div id="links" class="container" style="display: flex; justify-content: space-between; align-items: center">
             <div>
-                <a style="margin-right: 20px;" class="btn btn-primary btn-large" href="http://localhost/jitsiApp/backend/web/index.php?r=site%2Fcreate">Create a Meet</a>
-                <a class="btn btn-outline-primary btn-large" href="http://localhost/jitsiApp/backend/web/index.php?r=site%2Fmeets">Join meet</a>
-            </div>
-            <div>
-                <button style="margin-right: 20px;" class="btn btn-danger btn-large" disabled>Hide meet</button>
-                <a class="btn btn-outline-success btn-large" href="http://localhost/jitsiApp/backend/web/index.php?r=site%2Fmeets">List all Meets</a>
+                <a style="margin-right: 20px;" class="btn btn-primary btn-large m-2 p-2" href="<?= Url::base('http') ?> . /index.php?r=site%2Fcreate">Create a Meet </a>
+                <a class="btn btn-outline-primary btn-large m-2 p-2" href="<?= Url::base('http') ?> . /index.php?r=site%2Fmeets">Join meet</a>
+                <button style="margin-right: 20px;" class="btn btn-danger btn-large m-2 p-2" disabled>Hide meet</button>
+                <a class="btn btn-outline-success btn-large m-2 p-2" href="<?= Url::base('http') ?> . /index.php?r=site%2Fmeets">List all Meets</a>
             </div>
         </div>
 

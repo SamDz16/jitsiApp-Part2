@@ -22,7 +22,7 @@ function listMeets() {
       return `
   <div class="card text-white bg-info mb-3" style="max-width: 20rem;" wfd-id="83">
     <div class="card-header text-center"><h5 class="card-title">Click Down to Join</h5></div>
-    <div class="card-body">
+    <div onclick="embedMeet(this)" class="card-body">
       <i style="color: #000; margin-right: 5px" class="fas fa-angle-right text-white"></i> Room Name: <strong>${meet.options.room}</strong> <br />
       <i style="color: #000; margin-right: 5px" class="fas fa-angle-right text-white"></i> Real Room Name: <strong>${meet.options.roomName}</strong> <br />
       <i style="color: #000; margin-right: 5px" class="fas fa-angle-right text-white"></i> Password: <strong>${meet.options.password}</strong> <br />
@@ -52,39 +52,4 @@ function deleteMeet(target) {
   listMeets();
 }
 
-// Edit a meet
-function editMeet(target) {
-  "use strict";
-  // Retrieve the roomName
-  const roomName = target.children[1].textContent;
-
-  // Retrieve the specific meet
-  const targetedMeet = utila.targetedMeet(roomName);
-
-  // Save the specific meet to the localStorage
-  localStorage.setItem("hasToBeModified", JSON.stringify(targetedMeet));
-
-  // Construct the targeted url to the create.html in order to make modifications
-  location.href =
-    "http://localhost/jitsiApp/backend/web/index.php?r=site%2Fcreate";
-}
-// List all the meets
 listMeets();
-
-// Adding the click event for meetings
-$(".card-body").click(function () {
-  "use strict";
-  // Retrieve the roomName
-  const targetCard = this;
-  const roomName = targetCard.children[4].textContent.trim();
-
-  // Retrieve the targeted meet base on the roomName
-  const targetedMeet = utila.targetedMeet(roomName);
-
-  // Save the targeted meet to the local storage
-  localStorage.setItem("hasToBeEmbeded", JSON.stringify(targetedMeet));
-
-  // Construct the url to the home
-  location.href =
-    "http://localhost/jitsiApp/backend/web/index.php?r=site%2Findex";
-});

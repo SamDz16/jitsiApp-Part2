@@ -40,8 +40,15 @@ AppAsset::register($this);
             grid-template-columns: 1fr;
             justify-items: center;
         }
+        #links a, #links button{
+            display: inline-block;
+            width: 100%;
+        }
     }
 </style>
+<?php // JQuery CDN - Content Delevery Network ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
 <body>
 <?php $this->beginBody() ?>
 
@@ -87,13 +94,7 @@ AppAsset::register($this);
     </div>
 </div>
 
-<!--<footer class="footer">-->
-<!--    <div class="container">-->
-<!--        <p class="pull-left">&copy; --><?//= Html::encode(Yii::$app->name) ?><!-- --><?//= date('Y') ?><!--</p>-->
-<!---->
-<!--        <p class="pull-right">--><?//= Yii::powered() ?><!--</p>-->
-<!--    </div>-->
-<!--</footer>-->
+<footer style="display: none;" class="footer"></footer>
 
 <?php $this->endBody() ?>
 </body>

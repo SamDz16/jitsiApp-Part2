@@ -1,7 +1,11 @@
 <?php
 
-/* @var $this yii\web\View */
+use yii\helpers\Url;
 
+/* @var $this yii\web\View */
+if (class_exists('yii\debug\Module')) {
+    $this->off(\yii\web\View::EVENT_END_BODY, [\yii\debug\Module::getInstance(), 'renderToolbar']);
+}
 $this->title = 'Jitsi App';
 ?>
 <!-- JQuery CDN - Content Delevery Network -->
@@ -17,7 +21,7 @@ $this->title = 'Jitsi App';
 
 <!-- Form Submission -->
 <div class="container wrapper">
-    <form>
+    <form style="width: 70%; margin: 0 auto;">
         <div class="form-group">
             <label for="domain">Domain</label>
             <input type="text" class="form-control" id="domain" value="meet.jit.si" readonly>
@@ -46,9 +50,22 @@ $this->title = 'Jitsi App';
     <p class="text-center">&copy; 2020</p>
 </footer>
 
+<script>
+    // Handling the suggestion
+    function yes() {
+        "use strict";
+        // Popping off the suggestion
+        $("form + div").slideUp("slow");
 
-<!-- Bootswatch - Litera -->
-<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>-->
+        // Save the meet to the local storage
+        localStorage.setItem("hasToBeEmbeded", JSON.stringify(meet));
 
+        location.href = "<?= Url::base('http') ?> . /index.php";
+    }
 
+    function no() {
+        "use strict";
+        // Popping off the suggestion
+        $("form + div").slideUp("slow");
+    }
+</script>

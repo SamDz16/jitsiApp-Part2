@@ -1,6 +1,7 @@
 <?php
 namespace backend\controllers;
 
+use app\models\Meet;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -70,7 +71,19 @@ class SiteController extends Controller
 
     public function actionMeets()
     {
-        return $this->render('meets');
+        $db = \Yii::$app->db;
+        $meets= $db->createCommand("SELECT * FROM meet")->queryAll();
+//        $meets = "meeets";
+
+        return $this->render('meets', ['meets' => $meets]);
+    }
+
+    public function actionTest()
+    {
+        $meet = new Meet();
+        $meet->name = "sam";
+
+        echo $meet->name;
     }
 
     /**
