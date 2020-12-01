@@ -66,24 +66,29 @@ class SiteController extends Controller
 
     public function actionCreate()
     {
+        if(isset($_POST['room_name']))
+        {
+            $meet = new Meet();
+            $meet->room_name = $_POST['room_name'];
+//            $meet->real_room_name = $_POST['real_room_name'];
+            $meet->password = $_POST['password'];
+
+            $this->db->insert("tlb_meet", $meet);
+
+            return $this->render('index');
+        }
+
         return $this->render('create');
     }
 
     public function actionMeets()
     {
-        $db = \Yii::$app->db;
-        $meets= $db->createCommand("SELECT * FROM meet")->queryAll();
-//        $meets = "meeets";
+        // Fetch meets from database using ActiveRecords
+        // Meet is the model
+        $meets = Meet::find()->all();
 
+        // Render the view
         return $this->render('meets', ['meets' => $meets]);
-    }
-
-    public function actionTest()
-    {
-        $meet = new Meet();
-        $meet->name = "sam";
-
-        echo $meet->name;
     }
 
     /**

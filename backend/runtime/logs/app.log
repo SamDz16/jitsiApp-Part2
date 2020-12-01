@@ -2107,3 +2107,1113 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1606730668.552
     'REQUEST_TIME' => 1606730668
 ]
+2020-11-30 10:44:59 [::1][-][mf0cskj49fr7tdo577fk6ufktb][error][ParseError] ParseError: syntax error, unexpected 'foreach' (T_FOREACH) in C:\wamp64\www\jitsiApp\backend\views\site\meets.php:12
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\wamp64\\www\\j...', Array)
+#1 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\wamp64\\www\\j...', Array, Object(backend\controllers\SiteController))
+#2 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(409): yii\base\View->render('meets', Array, Object(backend\controllers\SiteController))
+#3 C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php(78): yii\base\Controller->render('meets', Array)
+#4 [internal function]: backend\controllers\SiteController->actionMeets()
+#5 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#7 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('meets', Array)
+#8 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/meets', Array)
+#9 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2020-11-30 10:44:59 [::1][-][mf0cskj49fr7tdo577fk6ufktb][info][application] $_GET = [
+    'r' => 'site/meets'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mf0cskj49fr7tdo577fk6ufktb'
+    '_csrf-backend' => '7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/jitsiApp/backend/web/index.php?r=site%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=mf0cskj49fr7tdo577fk6ufktb; _csrf-backend=7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MongoDB\\Server\\4.2\\bin;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\samdz\\AppData\\Roaming\\npm;C:\\Users\\samdz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php7.2.33;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samdz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samdz\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.2.33 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.2.33'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jitsiApp/backend/web/index.php'
+    'REMOTE_PORT' => '52253'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fmeets'
+    'REQUEST_URI' => '/jitsiApp/backend/web/index.php?r=site%2Fmeets'
+    'SCRIPT_NAME' => '/jitsiApp/backend/web/index.php'
+    'PHP_SELF' => '/jitsiApp/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606733099.393
+    'REQUEST_TIME' => 1606733099
+]
+2020-11-30 10:45:40 [::1][-][mf0cskj49fr7tdo577fk6ufktb][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'room_name' of non-object in C:\wamp64\www\jitsiApp\backend\views\site\meets.php:13
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\backend\views\site\meets.php(13): yii\web\ErrorHandler->handleError()
+#1 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(348): yii\web\View->unknown()
+#2 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#3 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#4 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(409): yii\web\View->render()
+#5 C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php(78): backend\controllers\SiteController->render()
+#6 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionMeets()
+#7 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#8 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams()
+#9 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Module.php(528): backend\controllers\SiteController->runAction()
+#10 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Application.php(104): yii\web\Application->runAction()
+#11 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#12 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\web\Application->run()
+#13 {main}
+2020-11-30 10:45:40 [::1][-][mf0cskj49fr7tdo577fk6ufktb][info][application] $_GET = [
+    'r' => 'site/meets'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mf0cskj49fr7tdo577fk6ufktb'
+    '_csrf-backend' => '7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/jitsiApp/backend/web/index.php?r=site%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=mf0cskj49fr7tdo577fk6ufktb; _csrf-backend=7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr%22%3B%7D'
+    'HTTP_DNT' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MongoDB\\Server\\4.2\\bin;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\samdz\\AppData\\Roaming\\npm;C:\\Users\\samdz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php7.2.33;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samdz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samdz\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.2.33 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.2.33'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jitsiApp/backend/web/index.php'
+    'REMOTE_PORT' => '52257'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fmeets'
+    'REQUEST_URI' => '/jitsiApp/backend/web/index.php?r=site%2Fmeets'
+    'SCRIPT_NAME' => '/jitsiApp/backend/web/index.php'
+    'PHP_SELF' => '/jitsiApp/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606733140.262
+    'REQUEST_TIME' => 1606733140
+]
+2020-11-30 10:46:16 [::1][-][mf0cskj49fr7tdo577fk6ufktb][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in C:\wamp64\www\jitsiApp\backend\views\site\meets.php:13
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\backend\views\site\meets.php(13): yii\web\ErrorHandler->handleError()
+#1 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(348): yii\web\View->unknown()
+#2 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#3 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#4 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(409): yii\web\View->render()
+#5 C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php(78): backend\controllers\SiteController->render()
+#6 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionMeets()
+#7 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#8 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams()
+#9 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Module.php(528): backend\controllers\SiteController->runAction()
+#10 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Application.php(104): yii\web\Application->runAction()
+#11 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#12 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\web\Application->run()
+#13 {main}
+2020-11-30 10:46:16 [::1][-][mf0cskj49fr7tdo577fk6ufktb][info][application] $_GET = [
+    'r' => 'site/meets'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mf0cskj49fr7tdo577fk6ufktb'
+    '_csrf-backend' => '7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/jitsiApp/backend/web/index.php?r=site%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=mf0cskj49fr7tdo577fk6ufktb; _csrf-backend=7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr%22%3B%7D'
+    'HTTP_DNT' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MongoDB\\Server\\4.2\\bin;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\samdz\\AppData\\Roaming\\npm;C:\\Users\\samdz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php7.2.33;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samdz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samdz\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.2.33 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.2.33'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jitsiApp/backend/web/index.php'
+    'REMOTE_PORT' => '52267'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fmeets'
+    'REQUEST_URI' => '/jitsiApp/backend/web/index.php?r=site%2Fmeets'
+    'SCRIPT_NAME' => '/jitsiApp/backend/web/index.php'
+    'PHP_SELF' => '/jitsiApp/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606733176.368
+    'REQUEST_TIME' => 1606733176
+]
+2020-11-30 10:46:30 [::1][-][mf0cskj49fr7tdo577fk6ufktb][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined offset: 0 in C:\wamp64\www\jitsiApp\backend\views\site\meets.php:13
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\backend\views\site\meets.php(13): yii\web\ErrorHandler->handleError()
+#1 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(348): yii\web\View->unknown()
+#2 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#3 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#4 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(409): yii\web\View->render()
+#5 C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php(78): backend\controllers\SiteController->render()
+#6 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionMeets()
+#7 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#8 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams()
+#9 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Module.php(528): backend\controllers\SiteController->runAction()
+#10 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Application.php(104): yii\web\Application->runAction()
+#11 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#12 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\web\Application->run()
+#13 {main}
+2020-11-30 10:46:30 [::1][-][mf0cskj49fr7tdo577fk6ufktb][info][application] $_GET = [
+    'r' => 'site/meets'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mf0cskj49fr7tdo577fk6ufktb'
+    '_csrf-backend' => '7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/jitsiApp/backend/web/index.php?r=site%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=mf0cskj49fr7tdo577fk6ufktb; _csrf-backend=7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr%22%3B%7D'
+    'HTTP_DNT' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MongoDB\\Server\\4.2\\bin;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\samdz\\AppData\\Roaming\\npm;C:\\Users\\samdz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php7.2.33;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samdz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samdz\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.2.33 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.2.33'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jitsiApp/backend/web/index.php'
+    'REMOTE_PORT' => '52271'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fmeets'
+    'REQUEST_URI' => '/jitsiApp/backend/web/index.php?r=site%2Fmeets'
+    'SCRIPT_NAME' => '/jitsiApp/backend/web/index.php'
+    'PHP_SELF' => '/jitsiApp/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606733190.104
+    'REQUEST_TIME' => 1606733190
+]
+2020-11-30 16:19:36 [::1][-][mf0cskj49fr7tdo577fk6ufktb][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: arr in C:\wamp64\www\jitsiApp\backend\views\site\meets.php:13
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\backend\views\site\meets.php(13): yii\web\ErrorHandler->handleError()
+#1 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(348): yii\web\View->unknown()
+#2 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#3 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#4 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(409): yii\web\View->render()
+#5 C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php(88): backend\controllers\SiteController->render()
+#6 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionMeets()
+#7 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#8 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams()
+#9 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Module.php(528): backend\controllers\SiteController->runAction()
+#10 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Application.php(104): yii\web\Application->runAction()
+#11 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#12 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\web\Application->run()
+#13 {main}
+2020-11-30 16:19:35 [::1][-][mf0cskj49fr7tdo577fk6ufktb][info][application] $_GET = [
+    'r' => 'site/meets'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mf0cskj49fr7tdo577fk6ufktb'
+    '_csrf-backend' => '7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/jitsiApp/backend/web%20.%20%20.%20/index.php?r=site%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=mf0cskj49fr7tdo577fk6ufktb; _csrf-backend=7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr%22%3B%7D'
+    'HTTP_DNT' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MongoDB\\Server\\4.2\\bin;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\samdz\\AppData\\Roaming\\npm;C:\\Users\\samdz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php7.2.33;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samdz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samdz\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.2.33 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.2.33'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jitsiApp/backend/web/index.php'
+    'REMOTE_PORT' => '53418'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fmeets'
+    'REQUEST_URI' => '/jitsiApp/backend/web%20.%20%20.%20/index.php?r=site%2Fmeets'
+    'SCRIPT_NAME' => '/jitsiApp/backend/web .  . /index.php'
+    'PHP_SELF' => '/jitsiApp/backend/web .  . /index.php'
+    'REQUEST_TIME_FLOAT' => 1606753175.97
+    'REQUEST_TIME' => 1606753175
+]
+2020-11-30 16:19:57 [::1][-][mf0cskj49fr7tdo577fk6ufktb][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: arr in C:\wamp64\www\jitsiApp\backend\views\site\meets.php:13
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\backend\views\site\meets.php(13): yii\web\ErrorHandler->handleError()
+#1 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(348): yii\web\View->unknown()
+#2 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#3 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#4 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(409): yii\web\View->render()
+#5 C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php(88): backend\controllers\SiteController->render()
+#6 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionMeets()
+#7 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#8 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams()
+#9 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Module.php(528): backend\controllers\SiteController->runAction()
+#10 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Application.php(104): yii\web\Application->runAction()
+#11 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#12 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\web\Application->run()
+#13 {main}
+2020-11-30 16:19:57 [::1][-][mf0cskj49fr7tdo577fk6ufktb][info][application] $_GET = [
+    'r' => 'site/meets'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mf0cskj49fr7tdo577fk6ufktb'
+    '_csrf-backend' => '7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/jitsiApp/backend/web%20.%20%20.%20/index.php?r=site%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=mf0cskj49fr7tdo577fk6ufktb; _csrf-backend=7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr%22%3B%7D'
+    'HTTP_DNT' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MongoDB\\Server\\4.2\\bin;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\samdz\\AppData\\Roaming\\npm;C:\\Users\\samdz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php7.2.33;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samdz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samdz\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.2.33 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.2.33'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jitsiApp/backend/web/index.php'
+    'REMOTE_PORT' => '53426'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fmeets'
+    'REQUEST_URI' => '/jitsiApp/backend/web%20.%20%20.%20/index.php?r=site%2Fmeets'
+    'SCRIPT_NAME' => '/jitsiApp/backend/web .  . /index.php'
+    'PHP_SELF' => '/jitsiApp/backend/web .  . /index.php'
+    'REQUEST_TIME_FLOAT' => 1606753197.697
+    'REQUEST_TIME' => 1606753197
+]
+2020-11-30 16:23:28 [::1][-][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php on line 87. in C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Response.php:370
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Response.php(343): yii\web\Response->sendHeaders()
+#1 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(398): yii\web\Response->send()
+#2 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2020-11-30 16:23:28 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/meets'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mf0cskj49fr7tdo577fk6ufktb'
+    '_csrf-backend' => '7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/jitsiApp/backend/web%20.%20%20.%20/index.php?r=site%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=mf0cskj49fr7tdo577fk6ufktb; _csrf-backend=7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr%22%3B%7D'
+    'HTTP_DNT' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MongoDB\\Server\\4.2\\bin;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\samdz\\AppData\\Roaming\\npm;C:\\Users\\samdz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php7.2.33;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samdz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samdz\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.2.33 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.2.33'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jitsiApp/backend/web/index.php'
+    'REMOTE_PORT' => '53468'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fmeets'
+    'REQUEST_URI' => '/jitsiApp/backend/web%20.%20%20.%20/index.php?r=site%2Fmeets'
+    'SCRIPT_NAME' => '/jitsiApp/backend/web .  . /index.php'
+    'PHP_SELF' => '/jitsiApp/backend/web .  . /index.php'
+    'REQUEST_TIME_FLOAT' => 1606753408.797
+    'REQUEST_TIME' => 1606753408
+]
+2020-11-30 16:24:43 [::1][-][mf0cskj49fr7tdo577fk6ufktb][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\Meet::0 in C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Component.php:155
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('0')
+#1 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Model.php(1027): yii\db\BaseActiveRecord->__get('0')
+#2 C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php(87): yii\base\Model->offsetGet(0)
+#3 [internal function]: backend\controllers\SiteController->actionMeets()
+#4 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('meets', Array)
+#7 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/meets', Array)
+#8 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2020-11-30 16:24:43 [::1][-][mf0cskj49fr7tdo577fk6ufktb][info][application] $_GET = [
+    'r' => 'site/meets'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mf0cskj49fr7tdo577fk6ufktb'
+    '_csrf-backend' => '7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/jitsiApp/backend/web%20.%20%20.%20/index.php?r=site%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=mf0cskj49fr7tdo577fk6ufktb; _csrf-backend=7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr%22%3B%7D'
+    'HTTP_DNT' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MongoDB\\Server\\4.2\\bin;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\samdz\\AppData\\Roaming\\npm;C:\\Users\\samdz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php7.2.33;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samdz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samdz\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.2.33 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.2.33'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jitsiApp/backend/web/index.php'
+    'REMOTE_PORT' => '53477'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fmeets'
+    'REQUEST_URI' => '/jitsiApp/backend/web%20.%20%20.%20/index.php?r=site%2Fmeets'
+    'SCRIPT_NAME' => '/jitsiApp/backend/web .  . /index.php'
+    'PHP_SELF' => '/jitsiApp/backend/web .  . /index.php'
+    'REQUEST_TIME_FLOAT' => 1606753483.352
+    'REQUEST_TIME' => 1606753483
+]
+2020-11-30 16:45:08 [::1][-][mf0cskj49fr7tdo577fk6ufktb][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in C:\wamp64\www\jitsiApp\backend\views\site\meets.php:40
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\backend\views\site\meets.php(40): yii\web\ErrorHandler->handleError()
+#1 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(348): yii\web\View->unknown()
+#2 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#3 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#4 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(409): yii\web\View->render()
+#5 C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php(88): backend\controllers\SiteController->render()
+#6 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionMeets()
+#7 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#8 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams()
+#9 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Module.php(528): backend\controllers\SiteController->runAction()
+#10 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Application.php(104): yii\web\Application->runAction()
+#11 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#12 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\web\Application->run()
+#13 {main}
+2020-11-30 16:45:08 [::1][-][mf0cskj49fr7tdo577fk6ufktb][info][application] $_GET = [
+    'r' => 'site/meets'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mf0cskj49fr7tdo577fk6ufktb'
+    '_csrf-backend' => '7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/jitsiApp/backend/web%20.%20%20.%20/index.php?r=site%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=mf0cskj49fr7tdo577fk6ufktb; _csrf-backend=7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr%22%3B%7D'
+    'HTTP_DNT' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MongoDB\\Server\\4.2\\bin;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\samdz\\AppData\\Roaming\\npm;C:\\Users\\samdz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php7.2.33;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samdz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samdz\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.2.33 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.2.33'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jitsiApp/backend/web/index.php'
+    'REMOTE_PORT' => '53792'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fmeets'
+    'REQUEST_URI' => '/jitsiApp/backend/web%20.%20%20.%20/index.php?r=site%2Fmeets'
+    'SCRIPT_NAME' => '/jitsiApp/backend/web .  . /index.php'
+    'PHP_SELF' => '/jitsiApp/backend/web .  . /index.php'
+    'REQUEST_TIME_FLOAT' => 1606754708.505
+    'REQUEST_TIME' => 1606754708
+]
+2020-11-30 17:28:13 [::1][-][mf0cskj49fr7tdo577fk6ufktb][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\Meet::passworde in C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Component.php:155
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('passworde')
+#1 C:\wamp64\www\jitsiApp\backend\views\site\meets.php(70): yii\db\BaseActiveRecord->__get('passworde')
+#2 [internal function]: yii\base\View->{closure}(Object(app\models\Meet))
+#3 C:\wamp64\www\jitsiApp\backend\views\site\meets.php(79): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(348): require('C:\\wamp64\\www\\j...')
+#5 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\wamp64\\www\\j...', Array)
+#6 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\wamp64\\www\\j...', Array, Object(backend\controllers\SiteController))
+#7 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(409): yii\base\View->render('meets', Array, Object(backend\controllers\SiteController))
+#8 C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php(88): yii\base\Controller->render('meets', Array)
+#9 [internal function]: backend\controllers\SiteController->actionMeets()
+#10 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#12 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('meets', Array)
+#13 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/meets', Array)
+#14 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2020-11-30 17:28:12 [::1][-][mf0cskj49fr7tdo577fk6ufktb][info][application] $_GET = [
+    'r' => 'site/meets'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mf0cskj49fr7tdo577fk6ufktb'
+    '_csrf-backend' => '7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/jitsiApp/backend/web/index.php?r=site%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=mf0cskj49fr7tdo577fk6ufktb; _csrf-backend=7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MongoDB\\Server\\4.2\\bin;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\samdz\\AppData\\Roaming\\npm;C:\\Users\\samdz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php7.2.33;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samdz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samdz\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.2.33 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.2.33'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jitsiApp/backend/web/index.php'
+    'REMOTE_PORT' => '54505'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fmeets'
+    'REQUEST_URI' => '/jitsiApp/backend/web/index.php?r=site%2Fmeets'
+    'SCRIPT_NAME' => '/jitsiApp/backend/web/index.php'
+    'PHP_SELF' => '/jitsiApp/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606757292.929
+    'REQUEST_TIME' => 1606757292
+]
+2020-11-30 18:08:41 [::1][-][mf0cskj49fr7tdo577fk6ufktb][error][ParseError] ParseError: syntax error, unexpected 'return' (T_RETURN), expecting ',' or ';' in C:\wamp64\www\jitsiApp\backend\views\site\meets.php:65
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\wamp64\\www\\j...', Array)
+#1 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\wamp64\\www\\j...', Array, Object(backend\controllers\SiteController))
+#2 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(409): yii\base\View->render('meets', Array, Object(backend\controllers\SiteController))
+#3 C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php(88): yii\base\Controller->render('meets', Array)
+#4 [internal function]: backend\controllers\SiteController->actionMeets()
+#5 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#7 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('meets', Array)
+#8 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/meets', Array)
+#9 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2020-11-30 18:08:41 [::1][-][mf0cskj49fr7tdo577fk6ufktb][info][application] $_GET = [
+    'r' => 'site/meets'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mf0cskj49fr7tdo577fk6ufktb'
+    '_csrf-backend' => '7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/jitsiApp/backend/web%20.%20/index.php?r=site%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=mf0cskj49fr7tdo577fk6ufktb; _csrf-backend=7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr%22%3B%7D'
+    'HTTP_DNT' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MongoDB\\Server\\4.2\\bin;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\samdz\\AppData\\Roaming\\npm;C:\\Users\\samdz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php7.2.33;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samdz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samdz\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.2.33 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.2.33'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jitsiApp/backend/web/index.php'
+    'REMOTE_PORT' => '54877'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fmeets'
+    'REQUEST_URI' => '/jitsiApp/backend/web%20.%20/index.php?r=site%2Fmeets'
+    'SCRIPT_NAME' => '/jitsiApp/backend/web . /index.php'
+    'PHP_SELF' => '/jitsiApp/backend/web . /index.php'
+    'REQUEST_TIME_FLOAT' => 1606759721.93
+    'REQUEST_TIME' => 1606759721
+]
+2020-11-30 18:52:41 [::1][-][mf0cskj49fr7tdo577fk6ufktb][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: rr in C:\wamp64\www\jitsiApp\backend\views\site\meets.php:90
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\backend\views\site\meets.php(90): yii\web\ErrorHandler->handleError()
+#1 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(348): yii\web\View->unknown()
+#2 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#3 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#4 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(409): yii\web\View->render()
+#5 C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php(88): backend\controllers\SiteController->render()
+#6 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionMeets()
+#7 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#8 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams()
+#9 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Module.php(528): backend\controllers\SiteController->runAction()
+#10 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Application.php(104): yii\web\Application->runAction()
+#11 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#12 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\web\Application->run()
+#13 {main}
+2020-11-30 18:52:41 [::1][-][mf0cskj49fr7tdo577fk6ufktb][info][application] $_GET = [
+    'r' => 'site/meets'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'mf0cskj49fr7tdo577fk6ufktb'
+    '_csrf-backend' => '7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/jitsiApp/backend/web%20.%20/index.php?r=site%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=mf0cskj49fr7tdo577fk6ufktb; _csrf-backend=7684dab9357cc64b187f4793464a833d79bf4b1b2aef45e108fba5c610e7b242a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9NcEkeuKs4ybUMTLN0U1HMmFb-MvzOr%22%3B%7D'
+    'HTTP_DNT' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MongoDB\\Server\\4.2\\bin;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\samdz\\AppData\\Roaming\\npm;C:\\Users\\samdz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php7.2.33;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samdz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samdz\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.2.33 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.2.33'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jitsiApp/backend/web/index.php'
+    'REMOTE_PORT' => '56359'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fmeets'
+    'REQUEST_URI' => '/jitsiApp/backend/web%20.%20/index.php?r=site%2Fmeets'
+    'SCRIPT_NAME' => '/jitsiApp/backend/web . /index.php'
+    'PHP_SELF' => '/jitsiApp/backend/web . /index.php'
+    'REQUEST_TIME_FLOAT' => 1606762361.172
+    'REQUEST_TIME' => 1606762361
+]
+2020-12-01 11:11:43 [::1][-][95iqp2ka4tgnjda6265pnth4ot][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1364 Field 'room_name' doesn't have a default value in C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\Command.php:1299
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\Command.php(1299): PDOStatement->execute()
+#1 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\Command.php(1099): yii\db\Command->internalExecute('INSERT INTO `me...')
+#2 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\Schema.php(433): yii\db\Command->execute()
+#3 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('{{%meet}}', Array)
+#4 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php(80): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\SiteController->actionCreate()
+#8 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#10 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/create', Array)
+#12 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1364 Field 'room_name' doesn't have a default value
+The SQL being executed was: INSERT INTO `meet` (`room_name`) VALUES (DEFAULT) in C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\Schema.php:678
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\Command.php(1304): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `me...')
+#1 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\Command.php(1099): yii\db\Command->internalExecute('INSERT INTO `me...')
+#2 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\Schema.php(433): yii\db\Command->execute()
+#3 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('{{%meet}}', Array)
+#4 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php(80): yii\db\BaseActiveRecord->save()
+#7 [internal function]: backend\controllers\SiteController->actionCreate()
+#8 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#10 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/create', Array)
+#12 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1364
+    [2] => Field 'room_name' doesn't have a default value
+)
+
+2020-12-01 11:11:42 [::1][-][95iqp2ka4tgnjda6265pnth4ot][info][application] $_GET = [
+    'r' => 'site/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '95iqp2ka4tgnjda6265pnth4ot'
+    '_csrf-backend' => '6524d0c0b6af6433d7f1460f8455c3e1ae86f23c8f80e6af2d6b83032413637ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"t7FFFkrJEET0xxyXM6WdwdTvuBNLGNI6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/my-app/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/jitsiApp/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=95iqp2ka4tgnjda6265pnth4ot; _csrf-backend=6524d0c0b6af6433d7f1460f8455c3e1ae86f23c8f80e6af2d6b83032413637ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22t7FFFkrJEET0xxyXM6WdwdTvuBNLGNI6%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MongoDB\\Server\\4.2\\bin;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\samdz\\AppData\\Roaming\\npm;C:\\Users\\samdz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php7.2.33;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samdz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samdz\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.2.33 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.2.33'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jitsiApp/backend/web/index.php'
+    'REMOTE_PORT' => '61355'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcreate'
+    'REQUEST_URI' => '/jitsiApp/backend/web/index.php?r=site%2Fcreate'
+    'SCRIPT_NAME' => '/jitsiApp/backend/web/index.php'
+    'PHP_SELF' => '/jitsiApp/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606821102.287
+    'REQUEST_TIME' => 1606821102
+]
+2020-12-01 14:15:44 [::1][-][95iqp2ka4tgnjda6265pnth4ot][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: room in C:\wamp64\www\jitsiApp\backend\views\site\create.php:20
+Stack trace:
+#0 C:\wamp64\www\jitsiApp\backend\views\site\create.php(20): yii\web\ErrorHandler->handleError()
+#1 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(348): yii\web\View->unknown()
+#2 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#3 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#4 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(409): yii\web\View->render()
+#5 C:\wamp64\www\jitsiApp\backend\controllers\SiteController.php(81): backend\controllers\SiteController->render()
+#6 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionCreate()
+#7 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#8 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams()
+#9 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Module.php(528): backend\controllers\SiteController->runAction()
+#10 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\web\Application.php(104): yii\web\Application->runAction()
+#11 C:\wamp64\www\jitsiApp\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#12 C:\wamp64\www\jitsiApp\backend\web\index.php(17): yii\web\Application->run()
+#13 {main}
+2020-12-01 14:15:44 [::1][-][95iqp2ka4tgnjda6265pnth4ot][info][application] $_GET = [
+    'r' => 'site/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '95iqp2ka4tgnjda6265pnth4ot'
+    '_csrf-backend' => '6524d0c0b6af6433d7f1460f8455c3e1ae86f23c8f80e6af2d6b83032413637ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"t7FFFkrJEET0xxyXM6WdwdTvuBNLGNI6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/my-app/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/jitsiApp/backend/web/index.php?r=site%2Fmeets'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'
+    'HTTP_COOKIE' => 'advanced-backend=95iqp2ka4tgnjda6265pnth4ot; _csrf-backend=6524d0c0b6af6433d7f1460f8455c3e1ae86f23c8f80e6af2d6b83032413637ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22t7FFFkrJEET0xxyXM6WdwdTvuBNLGNI6%22%3B%7D'
+    'HTTP_DNT' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MongoDB\\Server\\4.2\\bin;C:\\Program Files\\OpenSSL-Win64\\bin;C:\\Users\\samdz\\AppData\\Roaming\\npm;C:\\Users\\samdz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code;C:\\Program Files\\nodejs\\;C:\\wamp64\\bin\\php\\php7.2.33;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\samdz\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\samdz\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.2.33 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.2.33'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jitsiApp/backend/web/index.php'
+    'REMOTE_PORT' => '58545'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcreate'
+    'REQUEST_URI' => '/jitsiApp/backend/web/index.php?r=site%2Fcreate'
+    'SCRIPT_NAME' => '/jitsiApp/backend/web/index.php'
+    'PHP_SELF' => '/jitsiApp/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606832144.247
+    'REQUEST_TIME' => 1606832144
+]
