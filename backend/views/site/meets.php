@@ -10,6 +10,14 @@ $this->title = 'Jitsi App';
 ?>
 
 <script type="text/javascript">
+    //Meet class
+    class Meet {
+        constructor(domain, options) {
+            this.domain = domain;
+            this.options = options;
+        }
+    }
+
     class utila {
         static getMeets() {
             if (localStorage.getItem("meets") === null) return [];
@@ -54,7 +62,7 @@ $this->title = 'Jitsi App';
         localStorage.setItem("hasToBeEmbeded", JSON.stringify(targetedMeet));
 
         // Construct the url to the home
-        location.href = "<?= Url::base('http') ?> . /index.php";
+        location.href = "<?php Url::base('http') ?>./index.php";
     }
 
     // delete a meet
@@ -72,7 +80,7 @@ $this->title = 'Jitsi App';
         // Delete from DB
         utila.deleteFromDb("./db/delete.php", "POST", room);
 
-        location.href = "<?= Url::base('http') ?> . /index.php?r=site%2Fmeets";
+        location.href = "<?php Url::base('http') ?>./index.php?r=site%2Fmeets";
 
         // Refreshing the UI
         listMeets();
@@ -91,7 +99,7 @@ $this->title = 'Jitsi App';
         localStorage.setItem("hasToBeModified", JSON.stringify(targetedMeet));
 
         // Construct the targeted url to the create.html in order to make modifications
-        location.href = "<?= Url::base('http') ?> . /index.php?r=site%2Fcreate";
+        location.href = "<?php Url::base('http') ?>./index.php?r=site%2Fcreate";
     }
 
     // Listing out all the meets
@@ -123,6 +131,28 @@ $this->title = 'Jitsi App';
     }
 
     listMeets();
+
+    $(document).ready(() => {
+        const HtmlMeets = $("#meet-list").children();
+        const meets = [];
+        for(let i = 0; i < HtmlMeets.length; i++){
+            const HtmlMeet = HtmlMeets[i];
+            const HtmlContent = HtmlMeet.children[1];
+
+            const room = HtmlContent.children[1].textContent;
+            const roomName = HtmlContent.children[4].textContent;
+            const password = HtmlContent.children[7].textContent;
+            const createdAt = HtmlContent.children[10].textContent;
+
+            const meetObj = {room, roomName, password, createdAt};
+
+            const meet = new Meet("meet.jit.si", meetObj);
+            meets.push(meet);
+        }
+        // Set to local Storage
+        localStorage.setItem("meets", JSON.stringify(meets));
+
+    })
 </script>
 
 <!-- Meet view -->

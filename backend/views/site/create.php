@@ -79,7 +79,7 @@ $this->title = 'Jitsi App';
         }
 
         static verifyMeetForModification(meet, meetToModify) {
-            if(meet.options.roomName === meetToModify.options.roomName){
+            if(meet.options.room === meetToModify.options.room && meet.options.password === meetToModify.options.password ){
                 return true;
             }
 
@@ -209,7 +209,7 @@ $this->title = 'Jitsi App';
                         .delay(1000)
                         .fadeOut(2000, () => {
                             // Redirect to the meets
-                            location.href = "http://localhost/jitsiApp/backend/web/index.php?r=site%2Fmeets";
+                            location.href = "<?php Url::base('http') ?>./index.php?r=site%2Fmeets";
                         })
                 );
             }
@@ -283,7 +283,7 @@ $this->title = 'Jitsi App';
         // Save the meet to the local storage
         localStorage.setItem("hasToBeEmbeded", JSON.stringify(meet));
 
-        location.href = "<?= Url::base('http') ?> . /index.php";
+        location.href = "<?= Url::base('http') ?>./index.php";
     }
 
     function no() {

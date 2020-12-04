@@ -12,6 +12,7 @@ $this->title = 'Jitsi App';
 <script>
     // clear out tye local storage
     localStorage.removeItem("hasToBeModified");
+
 </script>
 
 <div class="wrapper">
@@ -22,10 +23,10 @@ $this->title = 'Jitsi App';
 
         <div id="links" class="container" style="display: flex; justify-content: space-between; align-items: center">
             <div>
-                <a style="margin-right: 20px;" class="btn btn-primary btn-large m-2 p-2" href="<?= Url::base('http') ?> . /index.php?r=site%2Fcreate">Create a Meet </a>
-                <a class="btn btn-outline-primary btn-large m-2 p-2" href="<?= Url::base('http') ?> . /index.php?r=site%2Fmeets">Join meet</a>
+                <a style="margin-right: 20px;" class="btn btn-primary btn-large m-2 p-2" href="<?php Url::base('http') ?>./index.php?r=site%2Fcreate">Create a Meet </a>
+                <a class="btn btn-outline-primary btn-large m-2 p-2" href="<?php Url::base('http') ?>./index.php?r=site%2Fmeets">Join meet</a>
                 <button style="margin-right: 20px;" class="btn btn-danger btn-large m-2 p-2" disabled>Hide meet</button>
-                <a class="btn btn-outline-success btn-large m-2 p-2" href="<?= Url::base('http') ?> . /index.php?r=site%2Fmeets">List all Meets</a>
+                <a class="btn btn-outline-success btn-large m-2 p-2" href="<?php Url::base('http') ?>./index.php?r=site%2Fmeets">List all Meets</a>
             </div>
         </div>
 
